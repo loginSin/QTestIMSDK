@@ -7,8 +7,8 @@
 //
 
 #import "RCSightCollectionViewCell.h"
-#import <RongIMKit/RCKitUtility.h>
-#import <RongIMKit/RCMessageModel.h>
+#import "RCKitUtility.h"
+#import "RCMessageModel.h"
 #import "RCIMClient+Destructing.h"
 #import "RCSightPlayerController+imkit.h"
 
