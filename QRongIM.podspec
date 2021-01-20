@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'IMKit' do |kit|
     kit.resources = "QRongIM/RongIMKit/Resource/RongCloud.bundle", "QRongIM/RongIMKit/Resource/en.lproj", "QRongIM/RongIMKit/Resource/zh-Hans.lproj", "QRongIM/RongIMKit/Resource/ar.lproj", "QRongIM/RongIMKit/Resource/Emoji.plist", "QRongIM/RongIMKit/Resource/RCColor.plist"
-    kit.source_files = 'QRongIM/RongIMKit/**/*'
+    kit.source_files = 'QRongIM/RongIMKit/**/*.{h,m,c}'
     kit.dependency 'QRongIM/IMLib'
   end
 
