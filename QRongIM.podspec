@@ -39,7 +39,8 @@ Pod::Spec.new do |s|
   s.author             = { "loginSin" => "https://github.com/loginSin" }
   s.social_media_url   = "loginSin"
   s.platform     = :ios, "8.0"
-  s.source       = { :http => "https://media.githubusercontent.com/media/loginSin/QTestIMSDK/main/QRongIM.zip" }
+  #s.source       = { :http => "https://downloads.rongcloud.cn/QRongIM.zip" }
+  s.source           = { :git => 'https://github.com/loginSin/QTestIMSDK.git', :tag => s.version.to_s }
   #s.default_subspec = 'IMLib', 'IMKit'
   s.requires_arc = true
 
