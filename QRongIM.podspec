@@ -39,90 +39,90 @@ Pod::Spec.new do |s|
   s.author             = { "loginSin" => "https://github.com/loginSin" }
   s.social_media_url   = "loginSin"
   s.platform     = :ios, "8.0"
-  s.source       = { :http => "https://media.githubusercontent.com/media/loginSin/QTestIMSDK/main/RongCloudIM.zip" }
+  s.source       = { :http => "https://media.githubusercontent.com/media/loginSin/QTestIMSDK/main/QRongIM.zip" }
   #s.default_subspec = 'IMLib', 'IMKit'
   s.requires_arc = true
 
   s.subspec 'IMLibCore' do |core|
-    core.source_files = 'RongCloudIM/RongIMLibCore.framework/Headers/*.h'
-    core.public_header_files = 'RongCloudIM/RongIMLibCore.framework/Headers/*.h'
-    core.vendored_frameworks = "RongCloudIM/RongIMLibCore.framework"
-    core.resources = "RongCloudIM/RCConfig.plist"
+    core.source_files = 'QRongIM/RongIMLibCore.framework/Headers/*.h'
+    core.public_header_files = 'QRongIM/RongIMLibCore.framework/Headers/*.h'
+    core.vendored_frameworks = "QRongIM/RongIMLibCore.framework"
+    core.resources = "QRongIM/RCConfig.plist"
     core.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
 
   s.subspec 'ChatRoom' do |cr|
-    cr.source_files = 'RongCloudIM/RongChatRoom.framework/Headers/*.h'
-    cr.public_header_files = 'RongCloudIM/RongChatRoom.framework/Headers/*.h'
-    cr.vendored_frameworks = "RongCloudIM/RongChatRoom.framework"
-    cr.dependency 'RongCloudIM/IMLibCore'
+    cr.source_files = 'QRongIM/RongChatRoom.framework/Headers/*.h'
+    cr.public_header_files = 'QRongIM/RongChatRoom.framework/Headers/*.h'
+    cr.vendored_frameworks = "QRongIM/RongChatRoom.framework"
+    cr.dependency 'QRongIM/IMLibCore'
     cr.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
   
   s.subspec 'CustomerService' do |cs|
-    cs.source_files = 'RongCloudIM/RongCustomerService.framework/Headers/*.h'
-    cs.public_header_files = 'RongCloudIM/RongCustomerService.framework/Headers/*.h'
-    cs.vendored_frameworks = "RongCloudIM/RongCustomerService.framework"
-    cs.dependency 'RongCloudIM/IMLibCore'
+    cs.source_files = 'QRongIM/RongCustomerService.framework/Headers/*.h'
+    cs.public_header_files = 'QRongIM/RongCustomerService.framework/Headers/*.h'
+    cs.vendored_frameworks = "QRongIM/RongCustomerService.framework"
+    cs.dependency 'QRongIM/IMLibCore'
     cs.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
   
   s.subspec 'Discussion' do |discussion|
-    discussion.source_files = 'RongCloudIM/RongDiscussion.framework/Headers/*.h'
-    discussion.public_header_files = 'RongCloudIM/RongDiscussion.framework/Headers/*.h'
-    discussion.vendored_frameworks = "RongCloudIM/RongDiscussion.framework"
-    discussion.dependency 'RongCloudIM/IMLibCore'
+    discussion.source_files = 'QRongIM/RongDiscussion.framework/Headers/*.h'
+    discussion.public_header_files = 'QRongIM/RongDiscussion.framework/Headers/*.h'
+    discussion.vendored_frameworks = "QRongIM/RongDiscussion.framework"
+    discussion.dependency 'QRongIM/IMLibCore'
     discussion.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
   
   s.subspec 'PublicService' do |ps|
-    ps.source_files = 'RongCloudIM/RongPublicService.framework/Headers/*.h'
-    ps.public_header_files = 'RongCloudIM/RongPublicService.framework/Headers/*.h'
-    ps.vendored_frameworks = "RongCloudIM/RongPublicService.framework"
-    ps.dependency 'RongCloudIM/IMLibCore'
+    ps.source_files = 'QRongIM/RongPublicService.framework/Headers/*.h'
+    ps.public_header_files = 'QRongIM/RongPublicService.framework/Headers/*.h'
+    ps.vendored_frameworks = "QRongIM/RongPublicService.framework"
+    ps.dependency 'QRongIM/IMLibCore'
     ps.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
   
   s.subspec 'Location' do |rtl|
-    rtl.source_files = 'RongCloudIM/RongLocation.framework/Headers/*.h'
-    rtl.public_header_files = 'RongCloudIM/RongLocation.framework/Headers/*.h'
-    rtl.vendored_frameworks = "RongCloudIM/RongLocation.framework"
-    rtl.dependency 'RongCloudIM/IMLibCore'
+    rtl.source_files = 'QRongIM/RongLocation.framework/Headers/*.h'
+    rtl.public_header_files = 'QRongIM/RongLocation.framework/Headers/*.h'
+    rtl.vendored_frameworks = "QRongIM/RongLocation.framework"
+    rtl.dependency 'QRongIM/IMLibCore'
     rtl.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
 
   s.subspec 'IMLib' do |lib|
-    lib.source_files = 'RongCloudIM/RongIMLib.framework/Headers/*.h'
-    lib.public_header_files = 'RongCloudIM/RongIMLib.framework/Headers/*.h'
-    lib.vendored_frameworks = "RongCloudIM/RongIMLib.framework"
-    lib.dependency 'RongCloudIM/IMLibCore'
-    lib.dependency 'RongCloudIM/ChatRoom'
-    lib.dependency 'RongCloudIM/Discussion'
-    lib.dependency 'RongCloudIM/PublicService'
-    lib.dependency 'RongCloudIM/CustomerService'
-    lib.dependency 'RongCloudIM/Location'
+    lib.source_files = 'QRongIM/RongIMLib.framework/Headers/*.h'
+    lib.public_header_files = 'QRongIM/RongIMLib.framework/Headers/*.h'
+    lib.vendored_frameworks = "QRongIM/RongIMLib.framework"
+    lib.dependency 'QRongIM/IMLibCore'
+    lib.dependency 'QRongIM/ChatRoom'
+    lib.dependency 'QRongIM/Discussion'
+    lib.dependency 'QRongIM/PublicService'
+    lib.dependency 'QRongIM/CustomerService'
+    lib.dependency 'QRongIM/Location'
     lib.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   end
 
   s.subspec 'IMKit' do |kit|
-    kit.resources = "RongCloudIM/RongIMKit/Resource/RongCloud.bundle", "RongCloudIM/RongIMKit/Resource/en.lproj", "RongCloudIM/RongIMKit/Resource/zh-Hans.lproj", "RongCloudIM/RongIMKit/Resource/ar.lproj", "RongCloudIM/RongIMKit/Resource/Emoji.plist", "RongCloudIM/RongIMKit/Resource/RCColor.plist"
-    kit.source_files = 'RongCloudIM/RongIMKit/**/*'
-    kit.dependency 'RongCloudIM/IMLib'
+    kit.resources = "QRongIM/RongIMKit/Resource/RongCloud.bundle", "QRongIM/RongIMKit/Resource/en.lproj", "QRongIM/RongIMKit/Resource/zh-Hans.lproj", "QRongIM/RongIMKit/Resource/ar.lproj", "QRongIM/RongIMKit/Resource/Emoji.plist", "QRongIM/RongIMKit/Resource/RCColor.plist"
+    kit.source_files = 'QRongIM/RongIMKit/**/*'
+    kit.dependency 'QRongIM/IMLib'
   end
 
   s.subspec 'RongSticker' do |rs|
-    rs.resources = "RongCloudIM/RongSticker.bundle", "RongCloudIM/en.lproj", "RongCloudIM/zh-Hans.lproj", "RongCloudIM/ar.lproj"
-    rs.source_files = 'RongCloudIM/RongSticker.framework/Headers/*.h'
-    rs.public_header_files = 'RongCloudIM/RongSticker.framework/Headers/*.h'
-    rs.vendored_frameworks = "RongCloudIM/RongSticker.framework"
-    rs.dependency 'RongCloudIM/IMKit'
+    rs.resources = "QRongIM/RongSticker.bundle", "QRongIM/en.lproj", "QRongIM/zh-Hans.lproj", "QRongIM/ar.lproj"
+    rs.source_files = 'QRongIM/RongSticker.framework/Headers/*.h'
+    rs.public_header_files = 'QRongIM/RongSticker.framework/Headers/*.h'
+    rs.vendored_frameworks = "QRongIM/RongSticker.framework"
+    rs.dependency 'QRongIM/IMKit'
   end
   
   s.subspec 'Sight' do |st|
-  st.source_files = 'RongCloudIM/RongSight.framework/Headers/*.h'
-  st.public_header_files = 'RongCloudIM/RongSight.framework/Headers/*.h'
-  st.vendored_frameworks = "RongCloudIM/RongSight.framework"
-  st.dependency 'RongCloudIM/IMKit'
+  st.source_files = 'QRongIM/RongSight.framework/Headers/*.h'
+  st.public_header_files = 'QRongIM/RongSight.framework/Headers/*.h'
+  st.vendored_frameworks = "QRongIM/RongSight.framework"
+  st.dependency 'QRongIM/IMKit'
   end
 
 end
