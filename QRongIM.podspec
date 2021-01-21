@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
   s.author             = { "loginSin" => "https://github.com/loginSin" }
   s.social_media_url   = "loginSin"
   s.platform     = :ios, "8.0"
-  #s.source       = { :http => "https://downloads.rongcloud.cn/QRongIM.zip" }
-  s.source           = { :git => 'https://github.com/loginSin/QTestIMSDK.git', :tag => s.version.to_s }
+  s.source       = { :http => "https://downloads.rongcloud.cn/QRongIM.zip" }
+  #s.source           = { :git => 'https://github.com/loginSin/QTestIMSDK.git', :tag => s.version.to_s }
   #s.default_subspec = 'IMLib', 'IMKit'
   s.requires_arc = true
 
@@ -106,7 +106,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'IMKit' do |kit|
-    kit.resources = "QRongIM/RongIMKit/Resource/RongCloud.bundle", "QRongIM/RongIMKit/Resource/en.lproj", "QRongIM/RongIMKit/Resource/zh-Hans.lproj", "QRongIM/RongIMKit/Resource/ar.lproj", "QRongIM/RongIMKit/Resource/Emoji.plist", "QRongIM/RongIMKit/Resource/RCColor.plist"
+    kit.resources = "QRongIM/RongCloud.bundle", "QRongIM/en.lproj", "QRongIM/zh-Hans.lproj", "QRongIM/ar.lproj", "QRongIM/Emoji.plist", "QRongIM/RCColor.plist"
     kit.source_files = 'QRongIM/RongIMKit/**/*.{h,m,c}'
     kit.dependency 'QRongIM/IMLib'
   end
